@@ -44,10 +44,13 @@ function getTasks() {
   for (let i = 0; i < tasks.length; i++) {
     let title = tasks[i].title;
     let description = tasks[i].description;
-    tasksView.innerHTML = tasksView.innerHTML += `<div class=" mt-12 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    <div class="">
-      <p>${title} - ${description}
-      <a onclick="deleteTask('${title}')" class="ml-4 focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Delete</a>
+    tasksView.innerHTML = tasksView.innerHTML += `<div class="mt-12 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl dark:bg-gray-800 dark:border-gray-700">
+    <div>
+      <p class="text-sm md:text-base lg:text-lg">
+        ${title} - ${description}
+        <a onclick="deleteTask('${title}')" class="ml-4 focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-xs sm:text-sm md:text-base px-3 py-1.5 md:px-4 md:py-2 lg:px-5 lg:py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
+          Delete
+        </a>
       </p>
     </div>
   </div>`;
